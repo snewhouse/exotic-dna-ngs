@@ -2,7 +2,7 @@
 
 ## Defaults
 CONDA=${1} # "Miniconda3" # Anaconda
-CONDA_VERSION=${2} # "4.4.0" # July 2017: latest
+CONDA_VERSION=${2} # "latest" "4.4.0" # July 2017: latest
 INSTALL_DIR=${3} # "${HOME}"
 
 ## URLS

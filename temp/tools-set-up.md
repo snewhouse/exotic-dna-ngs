@@ -3,7 +3,7 @@
 
 - https://conda.io/docs/help/silent.html  
 
-`install_conda <Miniconda3|Anaconda3> <4.4.0> <${HOME}>`
+`install_conda <Miniconda3|Anaconda3> <latest> <${HOME}>`
 
 ```bash
 function install_conda() {
