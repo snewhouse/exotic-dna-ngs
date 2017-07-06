@@ -16,7 +16,7 @@ main(){
 
 ## Args
 local CONDA="${1}" # "Miniconda3" # Anaconda
-local CONDA_VERSION="${2}" # "latest" "4.4.0" # July 2017: latest
+local CONDA_VERSION="${2}" # "latest"; "4.4.0"; "4.3.21" # July 2017: latest
 local INSTALL_DIR="${3}" # "${HOME}"
 
 ## fixed arch to x86_64
