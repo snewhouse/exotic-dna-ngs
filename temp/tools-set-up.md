@@ -49,8 +49,14 @@ else
 fi
 }
 
-
 ```
+
+test it
+
+```bash
+install_conda.sh Miniconda3 4.4.0 ${HOME}
+```
+
 
 make different python envs save initial install to fix for later : get code for this
 
