@@ -1,6 +1,11 @@
 #!/usr/bin/env bash
 
-install_conda(){
+## URLS
+readonly ANCONDA_URL="https://repo.continuum.io/archive"
+readonly MINICONDA_URL="https://repo.continuum.io/miniconda"
+
+
+install_conda_local(){
 
 ## usage
 usage(){
@@ -11,16 +16,12 @@ usage(){
 main(){
 
 ## Args
-local CONDA=${1} # "Miniconda3" # Anaconda
-local CONDA_VERSION=${2} # "latest" "4.4.0" # July 2017: latest
-local INSTALL_DIR=${3} # "${HOME}"
-
-## URLS
-readonly ANCONDA_URL="https://repo.continuum.io/archive"
-readonly MINICONDA_URL="https://repo.continuum.io/miniconda"
+local CONDA="${1}" # "Miniconda3" # Anaconda
+local CONDA_VERSION="${2}" # "latest" "4.4.0" # July 2017: latest
+local INSTALL_DIR="${3}" # "${HOME}"
 
 ## fixed arch to x86_64
-readonly ARCH="Linux-x86_64" # MacOSXx86_64
+local ARCH="Linux-x86_64" # MacOSXx86_64
 
 ## get mini- or anaconda
 if [[ "${CONDA}" == "Miniconda3" ]]; then
@@ -44,8 +45,8 @@ elif [[ "${CONDA}" == "Anaconda3" ]]; then
 else
     echo "[ERROR: $(date)] Options not recognised..exiting"
     usage
-    exit 1
+    ##exit 1
 fi
 }
-main
+main ${1} ${2} ${3}
 }
