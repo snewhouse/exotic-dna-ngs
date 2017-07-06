@@ -67,3 +67,7 @@ conda install -c bioconda picard=2.9.2
 
 
 align --> filter q20 --> samtools idxstats --> plot raw --> plot TPM  
+
+local
+
+- /mnt/lustre/users/k0959646
