@@ -19,9 +19,9 @@ if [[ "${CONDA}" == "Miniconda3" ]]; then
     CONDA_BASH_INSTALL="${CONDA}-${CONDA_VERSION}-${ARCH}.sh"
     # install
     wget ${MINICONDA_URL}/${CONDA_BASH_INSTALL} -O ${INSTALL_DIR}/conda_install.sh && \
-    bash ${INSTALL_DIR}/conda_install.sh -b -p ${INSTALL_DIR}/miniconda && \
+    bash ${INSTALL_DIR}/conda_install.sh -b -p ${INSTALL_DIR}/${CONDA} && \
     rm ${INSTALL_DIR}/conda_install.sh && \
-    export PATH="${INSTALL_DIR}/Miniconda3/bin:$PATH"
+    export PATH="${INSTALL_DIR}/${CONDA}/bin:$PATH"
     echo ${PATH}
 elif [[ "${CONDA}" == "Anaconda3" ]]; then
     echo "[INFO: $(date)] Installing: ${CONDA}-${CONDA_VERSION}-${ARCH}"
@@ -29,9 +29,9 @@ elif [[ "${CONDA}" == "Anaconda3" ]]; then
     CONDA_BASH_INSTALL="${CONDA}-${CONDA_VERSION}-${ARCH}.sh"
     # install
     wget ${ANCONDA_URL}/${CONDA_BASH_INSTALL} -O ${INSTALL_DIR}/conda_install.sh && \
-    bash ${INSTALL_DIR}/conda_install.sh -b -p ${INSTALL_DIR}/miniconda && \
+    bash ${INSTALL_DIR}/conda_install.sh -b -p ${INSTALL_DIR}/${CONDA} && \
     rm ${INSTALL_DIR}/conda_install.sh && \
-    export PATH="${INSTALL_DIR}/Anaconda3/bin:$PATH"
+    export PATH="${INSTALL_DIR}/${CONDA}/bin:$PATH"
     echo ${PATH}
 else
     echo "[ERROR: $(date)] Options not recognised..exiting"
