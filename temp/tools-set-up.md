@@ -7,6 +7,7 @@
 
 ```bash
 function install_conda() {
+#!/usr/bin/env bash
 
 ## Defaults
 local CONDA=${1} # "Miniconda3" # Anaconda
@@ -43,7 +44,7 @@ elif [[ "${CONDA}" == "Anaconda3" ]]; then
     
 else
     echo "[ERROR: $(date)] Options not recognised..exiting"
-    echo "[INFO: $(date)] USAGE: install_conda Miniconda3 4.4.0 ${HOME}"
+    echo "[INFO: $(date)] USAGE: install_conda.sh Miniconda3 4.4.0 ${HOME}"
     exit 1
 fi
 }
