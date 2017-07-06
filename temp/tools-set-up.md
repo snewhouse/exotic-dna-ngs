@@ -92,10 +92,11 @@ conda install -c bioconda samblaster=0.1.24
 conda install -c bioconda sambamba=0.6.6
 conda install -c bioconda fastqc=0.11.5
 conda install -c bioconda picard=2.9.2
+conda install -c bioconda nextflow=0.25.1
 ```
 
 
-align --> filter q20 --> samtools idxstats --> plot raw --> plot TPM  
+align --> filter q20 --> samtools idxstats --> plot raw --> calc TPM -- plot heatmap  
 
 local
 
