@@ -3,30 +3,32 @@
 
 - https://conda.io/docs/help/silent.html  
 
-`install_conda <Miniconda|Anaconda> <2|3> <>`
+`install_conda <Miniconda3|Anaconda3> <4.4.0> <${HOME}>`
 
 ```bash
-CONDA="Miniconda" # 
-pyVERSION="3" # 2
-CONDA_VERSION="4.4.0" # July 2017: latest
-INSTALL_DIR="${HOME}"
-ANCONDA_URL="https://repo.continuum.io/archive"
-MINICONDA_URL="https://repo.continuum.io/miniconda"
-ARCH="Linux-x86_64" # MacOSXx86_64
+function install_conda() {
 
-if [[ ${CONDA} == "Miniconda" ]];
-    CONDA_VERSION="miniconda/Miniconda3-3.7.0-Linux-x86_64.sh"
-    wget http://repo.continuum.io/${CONDA_VERSION} -O ${HOME}/conda_install.sh
-    bash ${HOME}/conda_install -b -p ${HOME}/miniconda
-    export PATH="$HOME/miniconda/bin:$PATH"
-    rm ${HOME}/conda_install.sh
-else
-    CONDA_VERSION="miniconda/Miniconda3-3.7.0-Linux-x86_64.sh"
-    wget http://repo.continuum.io/${CONDA_VERSION} -O ${HOME}/conda_install.sh
-    bash ${HOME}/conda_install -b -p ${HOME}/anaconda
-    export PATH="$HOME/miniconda/bin:$PATH"
-    rm ${HOME}/conda_install.sh
-fi
+## Defaults
+local CONDA=${1} # "Miniconda" # Anaconda
+local CONDA_VERSION=${2} # "4.4.0" # July 2017: latest
+local INSTALL_DIR=${3} # "${HOME}"
+
+## URLS
+readonly ANCONDA_URL="https://repo.continuum.io/archive"
+readonly MINICONDA_URL="https://repo.continuum.io/miniconda"
+
+## fixed arch to x86_64 
+readonly ARCH="Linux-x86_64" # MacOSXx86_64
+
+CONDA_VERSION="miniconda/Miniconda3-3.7.0-Linux-x86_64.sh"
+
+wget http://repo.continuum.io/${CONDA_VERSION} -O ${INSTALL_DIR}/conda_install.sh && \
+bash ${INSTALL_DIR}/conda_install -b -p ${INSTALL_DIR}/miniconda && \
+export PATH="$HOME/miniconda/bin:$PATH" && \
+rm ${INSTALL_DIR}/conda_install.sh
+}
+
+
 ```
 
 make different python envs save initial install to fix for later : get code for this
