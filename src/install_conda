@@ -21,7 +21,7 @@ if [[ "${CONDA}" == "Miniconda3" ]]; then
     wget ${MINICONDA_URL}/${CONDA_BASH_INSTALL} -O ${INSTALL_DIR}/conda_install.sh && \
     bash ${INSTALL_DIR}/conda_install.sh -b -p ${INSTALL_DIR}/${CONDA} && \
     rm ${INSTALL_DIR}/conda_install.sh && \
-    export PATH="${INSTALL_DIR}/${CONDA}/bin:$PATH"
+    export PATH="${INSTALL_DIR}/${CONDA}/bin:${PATH}"
     echo ${PATH}
 elif [[ "${CONDA}" == "Anaconda3" ]]; then
     echo "[INFO: $(date)] Installing: ${CONDA}-${CONDA_VERSION}-${ARCH}"
@@ -31,7 +31,7 @@ elif [[ "${CONDA}" == "Anaconda3" ]]; then
     wget ${ANCONDA_URL}/${CONDA_BASH_INSTALL} -O ${INSTALL_DIR}/conda_install.sh && \
     bash ${INSTALL_DIR}/conda_install.sh -b -p ${INSTALL_DIR}/${CONDA} && \
     rm ${INSTALL_DIR}/conda_install.sh && \
-    export PATH="${INSTALL_DIR}/${CONDA}/bin:$PATH"
+    export PATH="${INSTALL_DIR}/${CONDA}/bin:${PATH}"
     echo ${PATH}
 else
     echo "[ERROR: $(date)] Options not recognised..exiting"
