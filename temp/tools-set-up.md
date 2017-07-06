@@ -9,7 +9,7 @@
 function install_conda() {
 
 ## Defaults
-local CONDA=${1} # "Miniconda" # Anaconda
+local CONDA=${1} # "Miniconda3" # Anaconda
 local CONDA_VERSION=${2} # "4.4.0" # July 2017: latest
 local INSTALL_DIR=${3} # "${HOME}"
 
@@ -20,12 +20,32 @@ readonly MINICONDA_URL="https://repo.continuum.io/miniconda"
 ## fixed arch to x86_64 
 readonly ARCH="Linux-x86_64" # MacOSXx86_64
 
-CONDA_VERSION="miniconda/Miniconda3-3.7.0-Linux-x86_64.sh"
-
-wget http://repo.continuum.io/${CONDA_VERSION} -O ${INSTALL_DIR}/conda_install.sh && \
-bash ${INSTALL_DIR}/conda_install -b -p ${INSTALL_DIR}/miniconda && \
-export PATH="$HOME/miniconda/bin:$PATH" && \
-rm ${INSTALL_DIR}/conda_install.sh
+## Installation main
+if [[ "${CONDA}" == "Miniconda3" ]]; then
+    echo "[INFO: $(date)] Installing: ${CONDA}-${CONDA_VERSION}-${ARCH}"
+    echo "[INFO: $(date)] Installation Directory: ${INSTALL_DIR}"
+    local CONDA_BASH_INSTALL="${CONDA}-${CONDA_VERSION}-${ARCH}.sh"
+    # install
+    wget ${MINICONDA_URL}/${CONDA_BASH_INSTALL} -O ${INSTALL_DIR}/conda_install.sh && \
+    bash ${INSTALL_DIR}/conda_install.sh -b -p ${INSTALL_DIR}/miniconda && \
+    export PATH="$HOME/miniconda/bin:$PATH" && \
+    rm ${INSTALL_DIR}/conda_install.sh
+    
+elif [[ "${CONDA}" == "Anaconda3" ]]; then
+    echo "[INFO: $(date)] Installing: ${CONDA}-${CONDA_VERSION}-${ARCH}"
+    echo "[INFO: $(date)] Installation Directory: ${INSTALL_DIR}"
+    local CONDA_BASH_INSTALL="${CONDA}-${CONDA_VERSION}-${ARCH}.sh"
+    # install
+    wget ${MINICONDA_URL}/${CONDA_BASH_INSTALL} -O ${INSTALL_DIR}/conda_install.sh && \
+    bash ${INSTALL_DIR}/conda_install.sh -b -p ${INSTALL_DIR}/miniconda && \
+    export PATH="$HOME/miniconda/bin:$PATH" && \
+    rm ${INSTALL_DIR}/conda_install.sh
+    
+else
+    echo "[ERROR: $(date)] Options not recognised..exiting"
+    echo "[INFO: $(date)] USAGE: install_conda Miniconda3 4.4.0 ${HOME}"
+    exit 1
+fi
 }
 
 
