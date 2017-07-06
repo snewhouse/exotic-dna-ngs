@@ -28,7 +28,7 @@ if [[ "${CONDA}" == "Miniconda3" ]]; then
     # install
     wget ${MINICONDA_URL}/${CONDA_BASH_INSTALL} -O ${INSTALL_DIR}/conda_install.sh && \
     bash ${INSTALL_DIR}/conda_install.sh -b -p ${INSTALL_DIR}/miniconda && \
-    export PATH="$HOME/miniconda/bin:$PATH" && \
+    export PATH="${INSTALL_DIR}/miniconda/bin:$PATH" && \
     rm ${INSTALL_DIR}/conda_install.sh
     
 elif [[ "${CONDA}" == "Anaconda3" ]]; then
@@ -36,9 +36,9 @@ elif [[ "${CONDA}" == "Anaconda3" ]]; then
     echo "[INFO: $(date)] Installation Directory: ${INSTALL_DIR}"
     local CONDA_BASH_INSTALL="${CONDA}-${CONDA_VERSION}-${ARCH}.sh"
     # install
-    wget ${MINICONDA_URL}/${CONDA_BASH_INSTALL} -O ${INSTALL_DIR}/conda_install.sh && \
+    wget ${ANCONDA_URL}/${CONDA_BASH_INSTALL} -O ${INSTALL_DIR}/conda_install.sh && \
     bash ${INSTALL_DIR}/conda_install.sh -b -p ${INSTALL_DIR}/miniconda && \
-    export PATH="$HOME/miniconda/bin:$PATH" && \
+    export PATH="${INSTALL_DIR}/miniconda/bin:$PATH" && \
     rm ${INSTALL_DIR}/conda_install.sh
     
 else
