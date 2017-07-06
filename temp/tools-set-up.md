@@ -3,13 +3,33 @@
 
 - https://conda.io/docs/help/silent.html  
 
+`install_conda <Miniconda|Anaconda> <2|3> <>`
+
 ```bash
-wget http://repo.continuum.io/miniconda/Miniconda3-3.7.0-Linux-x86_64.sh -O ~/miniconda.sh
-bash ~/miniconda.sh -b -p $HOME/miniconda
-export PATH="$HOME/miniconda/bin:$PATH"
+CONDA="Miniconda" # 
+pyVERSION="3" # 2
+CONDA_VERSION="4.4.0" # July 2017: latest
+INSTALL_DIR="${HOME}"
+ANCONDA_URL="https://repo.continuum.io/archive"
+MINICONDA_URL="https://repo.continuum.io/miniconda"
+ARCH="Linux-x86_64" # MacOSXx86_64
+
+if [[ ${CONDA} == "Miniconda" ]];
+    CONDA_VERSION="miniconda/Miniconda3-3.7.0-Linux-x86_64.sh"
+    wget http://repo.continuum.io/${CONDA_VERSION} -O ${HOME}/conda_install.sh
+    bash ${HOME}/conda_install -b -p ${HOME}/miniconda
+    export PATH="$HOME/miniconda/bin:$PATH"
+    rm ${HOME}/conda_install.sh
+else
+    CONDA_VERSION="miniconda/Miniconda3-3.7.0-Linux-x86_64.sh"
+    wget http://repo.continuum.io/${CONDA_VERSION} -O ${HOME}/conda_install.sh
+    bash ${HOME}/conda_install -b -p ${HOME}/anaconda
+    export PATH="$HOME/miniconda/bin:$PATH"
+    rm ${HOME}/conda_install.sh
+fi
 ```
 
-make different python envs
+make different python envs save initial install to fix for later : get code for this
 
 ```bash
 conda create -n py3k anaconda python=3
