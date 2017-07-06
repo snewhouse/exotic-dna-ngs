@@ -1,9 +1,8 @@
 #!/usr/bin/env bash
 
 ## URLS
-readonly ANCONDA_URL="https://repo.continuum.io/archive"
-readonly MINICONDA_URL="https://repo.continuum.io/miniconda"
-
+readonly ANCONDA_URL="https://repo.continuum.io/archive" ## 4.4.0
+readonly MINICONDA_URL="https://repo.continuum.io/miniconda" ## 4.3.21
 
 install_conda_local(){
 
@@ -34,6 +33,8 @@ if [[ "${CONDA}" == "Miniconda3" ]]; then
     rm ${INSTALL_DIR}/conda_install.sh && \
     export PATH="${INSTALL_DIR}/${CONDA}/bin:${PATH}"
 elif [[ "${CONDA}" == "Anaconda3" ]]; then
+    #unset CONDA_VERSION
+    #local CONDA_VERSION="4.4.0" ## quick fix as latest dont exist for anaconda
     echo "[INFO: $(date)] Installing: ${CONDA}-${CONDA_VERSION}-${ARCH}"
     echo "[INFO: $(date)] Installation Directory: ${INSTALL_DIR}"
     local CONDA_BASH_INSTALL="${CONDA}-${CONDA_VERSION}-${ARCH}.sh"
