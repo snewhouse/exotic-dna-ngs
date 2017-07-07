@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-INSTALL_DIR="${1-HOME}" # "${HOME}"
+INSTALL_DIR="${1:-${HOME}}" # "${HOME}"
 readonly ANCONDA_URL="https://repo.continuum.io/archive" ## 4.4.0
 readonly CONDA="Anaconda3"
 readonly CONDA_VERSION="4.4.0" # 4.4.0
