@@ -1,0 +1,1 @@
+export PATH="${INSTALL_DIR}/${CONDA}/bin:${PATH}"
