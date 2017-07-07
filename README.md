@@ -1,5 +1,6 @@
 # exotic-dna-ngs
 **VERSION:** 0.1-alhpa  
+**Author:** Dr Stephen J Newhouse; stephen.j.newhouse@gmail.com
 
 _WIP & POC: Count Viral and other non-human genome signatures in Human NGS data_  
 
@@ -27,19 +28,10 @@ The basic questions:
 - What is the origin of this DNA (Viral, bacterial, fungal, other...)?
 - Can we quantify this is any way?
 - If so, are there any menaingful differences between:
-    - labs (contamination)
+    - labs (contamination, batch procssessing etc)
     - disease groups (case v control)
     - geography
-
-## Dependencies and Requirements
-
-- Linux-x86_64
-- Optional: Docker 
-- Anaconda
-
-## Installing
-
-## Running
+    - ...any other groups you can think off?
 
 
 
