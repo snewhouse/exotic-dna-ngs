@@ -1,5 +1,6 @@
 # exotic-dna-ngs
-[![DOI](https://zenodo.org/badge/96406831.svg)](https://zenodo.org/badge/latestdoi/96406831)
+
+[![DOI](https://zenodo.org/badge/96406831.svg)](https://zenodo.org/badge/latestdoi/96406831) [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.824201.svg)](https://doi.org/10.5281/zenodo.824201)
 
 **VERSION:** 0.1-alhpa  
 **Author:** Dr Stephen J Newhouse; stephen.j.newhouse@gmail.com
