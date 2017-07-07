@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 INSTALL_DIR="${1:-${HOME}}" # "${HOME}"
+
 readonly MINICONDA_URL="https://repo.continuum.io/miniconda" ## 4.3.21
 readonly CONDA="Miniconda3"
 readonly CONDA_VERSION="4.3.21" # "latest"; "4.3.21" # July 2017: latest
