@@ -36,6 +36,7 @@ The basic questions:
     - ...any other groups you can think off?
 
 ## The Docs
-- WIP: see [Docs](https://github.com/snewhouse/exotic-dna-ngs/tree/master/docs)
+- WIP: see [Docs](https://github.com/snewhouse/exotic-dna-ngs/tree/master/docs)  
+- bwa mapping pipeline (nextflow): [map-bwa.nf](https://github.com/snewhouse/exotic-dna-ngs/blob/master/src/map-bwa.nf)  
 
-
+**NOT TESTED!**
