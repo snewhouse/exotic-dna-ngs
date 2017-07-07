@@ -14,6 +14,7 @@ Build a simple pipeline to detect Viral and other non-human genome signatures in
 
 - Linux-x86_64
 - Optional: Docker 
+- Anaconda
 
 ## Installing
 
