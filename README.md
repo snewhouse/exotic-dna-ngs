@@ -36,6 +36,6 @@ The basic questions:
     - ...any other groups you can think off?
 
 ## The Docs
-- WIP: see [Docs](../docs/README.md)
+- WIP: see [Docs](https://github.com/snewhouse/exotic-dna-ngs/tree/master/docs)
 
 
