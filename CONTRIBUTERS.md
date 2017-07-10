@@ -1,2 +1,6 @@
+### Contributors  
 
-- Dr Stephen J Newhouse; email: stephen.j.newhouse@gmail.com; git_handle: snewhouse  
+- Stephen J Newhouse | stephen.j.newhouse@gmail.com | [snewhouse](https://github.com/snewhouse) | [@s_j_newhouse](https://twitter.com/s_j_newhouse)
+  
+ 
+

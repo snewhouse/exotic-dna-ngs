@@ -47,6 +47,10 @@ most DNA extraction methods will capture everything (within limits) i.e. its not
 
 - Stephen J Newhouse | stephen.j.newhouse@gmail.com | [snewhouse](https://github.com/snewhouse) | [@s_j_newhouse](https://twitter.com/s_j_newhouse)
 
+### Contributors
+
+Full list at [Contributors](https://github.com/snewhouse/exotic-dna-ngs/blob/master/CONTRIBUTERS.md)
+
 ******
 
 <p align="center">
