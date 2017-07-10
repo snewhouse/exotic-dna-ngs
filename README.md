@@ -50,7 +50,7 @@ most DNA extraction methods will capture everything (within limits) i.e. its not
 ******
 
 <p align="center">
-  Development funded as part of 
+  Development funded as part of:</br>
   <a href="http://www.maudsleybrc.nihr.ac.uk/">NIHR Maudsley Biomedical Research Centre (BRC), King's College London</a> and the </br>  
     <a href="http://www.ucl.ac.uk/health-informatics/">Farr Institute of Health Informatics Research, UCL Institute of Health Informatics, University College London</a>
   </br>
