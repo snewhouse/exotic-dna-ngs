@@ -45,6 +45,14 @@ most DNA extraction methods will capture everything (within limits) i.e. its not
 
 ## Core Contributors
 
-- Stephen J Newhouse
+- Stephen J Newhouse | stephen.j.newhouse@gmail.com | []()  
 
 ******
+
+<p align="center">
+  Development funded as part of 
+  <a href="http://www.maudsleybrc.nihr.ac.uk/">NIHR Maudsley Biomedical Research Centre (BRC)</a> and the </br>  
+    <a href="http://www.ucl.ac.uk/health-informatics/">Farr Institute of Health Informatics Research, UCL Institute of Health Informatics, University College London</a>
+  <a href="http://wurmlab.github.io/">Wurm Lab</a>,
+  <a href="http://sbcs.mul.ac.uk/">Queen Mary University of London</a>.
+</p>
