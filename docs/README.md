@@ -44,7 +44,7 @@ export PATH="${HOME}/Miniconda3/bin:${PATH}
 
 ### Non-Human Genomes
 
-### Get Test WGS Data
+## Get Test WGS Data
 
 ## Running
 
