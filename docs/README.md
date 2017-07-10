@@ -37,9 +37,9 @@ July 2017 Version: `Miniconda3-4.3.21-Linux-x86_64.sh`
 
 ```bash
 wget https://repo.continuum.io/miniconda/Miniconda3-4.3.21-Linux-x86_64.sh -O ./conda_install.sh && \
-bash ./conda_install.sh -b -p ${HOME}/Miniconda3 && \
-rm ./conda_install.sh
+bash ./conda_install.sh -b -p ${HOME}/Miniconda3
 export PATH="${HOME}/Miniconda3/bin:${PATH}
+rm ./conda_install.sh
 ```
 
 ## Get Reference Genomes
