@@ -45,6 +45,10 @@ rm ./conda_install.sh
 ## Config Conda and Install NGS Tools
 
 ```bash
+export PATH="${HOME}/Miniconda3/bin:${PATH}
+```
+
+```bash
 conda config --add channels r
 conda config --add channels defaults
 conda config --add channels conda-forge
