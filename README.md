@@ -36,6 +36,10 @@ most DNA extraction methods will capture everything (within limits) i.e. its not
     - ...any other groups you can think off?
         
 
+> What about [Kraken](https://ccb.jhu.edu/software/kraken/)!? I here you say...well, it is awesome, but compute and memory
+intensive. I want to provide something a little less "hungry". Hah - but, its NGS data!!! I hear you say again...let's see 
+how this all turns out. 
+
 ## The Docs
 - WIP: see [Docs](https://github.com/snewhouse/exotic-dna-ngs/tree/master/docs)  
 - bwa mapping pipeline (nextflow): [map-bwa.nf](https://github.com/snewhouse/exotic-dna-ngs/blob/master/src/map-bwa.nf)  
