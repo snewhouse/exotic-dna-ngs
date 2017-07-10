@@ -42,6 +42,8 @@ export PATH="${HOME}/Miniconda3/bin:${PATH}
 rm ./conda_install.sh
 ```
 
+## Install NGS Tools
+
 ## Get Reference Genomes
 
 ### Human Genomes
