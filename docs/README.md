@@ -6,7 +6,11 @@
 - Optional: Docker 
 - Workstation capable of running NGS pipelines (min 8-16 GB RAM, min 8 CPUs, 1TB HDD)
 
-## Installing
+Tested on Linux-x86_64.
+
+## Get the Code & installing
+
+### Get the code
 
 ```bash
 git https://github.com/snewhouse/exotic-dna-ngs.git
@@ -18,6 +22,7 @@ cd exotic-dna-ngs
 - [ ] install required NGS tools
 - [ ] get genomes
 - [ ] index genomes 
+- [ ] get test data
 - [ ] test
 
 ## Get Reference Genomes
@@ -26,5 +31,9 @@ cd exotic-dna-ngs
 
 ### Non-Human Genomes
 
-
 ## Running
+
+
+```bash
+CMD ... Boom!
+```
