@@ -46,9 +46,19 @@ export PATH="${HOME}/Miniconda3/bin:${PATH}
 
 ### Human Genomes
 
+- [ ] b38
+- [ ] b37
+
 ### Non-Human Genomes
 
+- [ ] Viral
+- [ ] bacterial
+- [ ] fungal
+
 ## Get Test WGS Data
+
+- [ ] [giab_data_indexes](https://github.com/genome-in-a-bottle/giab_data_indexes)
+- [ ] others
 
 ## Running
 
