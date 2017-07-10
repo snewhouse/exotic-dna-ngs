@@ -1,4 +1,4 @@
 ## WGS Data
 
-Data sources (google and https://repositive.io/ searchs)
+Data sources (google and https://repositive.io/ searches)
 
