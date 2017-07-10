@@ -17,6 +17,8 @@ git https://github.com/snewhouse/exotic-dna-ngs.git
 cd exotic-dna-ngs
 ```
 
+**PoA**
+
 - [ ] install miniconda3 or anaconda3
 - [ ] create python2 conda env
 - [ ] install required NGS tools
@@ -26,6 +28,8 @@ cd exotic-dna-ngs
 - [ ] test
 - [ ] fastq --> alignement --> qc --> count, sumarise and visualise  
 - [ ] bam --> fastq --> alignement --> qc --> count, sumarise and visualise 
+- [ ] bash and nextflow versions
+- [ ] Docker and Singularity builds
 
 ## Install Miniconda3
 
