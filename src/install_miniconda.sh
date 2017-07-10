@@ -12,13 +12,23 @@ echo "[INFO: $(date)] Installation Directory: ${INSTALL_DIR}"
 CONDA_BASH_INSTALL="${CONDA}-${CONDA_VERSION}-${ARCH}.sh"
 
 # install
-CMD="wget --quiet -nc ${MINICONDA_URL}/${CONDA_BASH_INSTALL} -O ${INSTALL_DIR}/conda_install.sh && \
-bash ${INSTALL_DIR}/conda_install.sh -b -p ${INSTALL_DIR}/${CONDA}"
+CMD1="wget --quiet -nc ${MINICONDA_URL}/${CONDA_BASH_INSTALL} -O ${INSTALL_DIR}/conda_install.sh"
+CMD2="bash ${INSTALL_DIR}/conda_install.sh -b -p ${INSTALL_DIR}/${CONDA}"
+CMD3="rm -v ${INSTALL_DIR}/conda_install.sh"
 
-echo "[INFO: $(date)] Running CMD: ${CMD}"
+echo "[INFO: $(date)] Running CMD: ${CMD1}"
 
-${CMD} | tee -a ${INSTALL_DIR}/conda-install-$(date +%y%m%d%M).log
+${CMD1} | tee -a ${INSTALL_DIR}/conda-install-$(date +%y%m%d%M).log
 
+echo "[INFO: $(date)] Running CMD: ${CMD2}"
+${CMD2} | tee -a ${INSTALL_DIR}/conda-install-$(date +%y%m%d%M).log
+
+echo "[INFO: $(date)] Running CMD: ${CMD3}"
+${CMD3} | tee -a ${INSTALL_DIR}/conda-install-$(date +%y%m%d%M).log
+
+echo "[INFO: $(date)] Adding Conda to PATH"
 export PATH="${INSTALL_DIR}/${CONDA}/bin:${PATH}"
 
-rm -v ${INSTALL_DIR}/conda_install.sh
+echo "[INFO: $(date)] Conda Version $(conda -V)"
+
+echo "[INFO: $(date)] END"
