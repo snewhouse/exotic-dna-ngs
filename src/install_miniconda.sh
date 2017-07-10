@@ -12,7 +12,7 @@ echo "[INFO: $(date)] Installation Directory: ${INSTALL_DIR}"
 CONDA_BASH_INSTALL="${CONDA}-${CONDA_VERSION}-${ARCH}.sh"
 
 # install
-CMD="wget ${MINICONDA_URL}/${CONDA_BASH_INSTALL} -O ${INSTALL_DIR}/conda_install.sh && \
+CMD="wget --quiet -nc ${MINICONDA_URL}/${CONDA_BASH_INSTALL} -O ${INSTALL_DIR}/conda_install.sh && \
 bash ${INSTALL_DIR}/conda_install.sh -b -p ${INSTALL_DIR}/${CONDA} && \
 rm ${INSTALL_DIR}/conda_install.sh"
 
