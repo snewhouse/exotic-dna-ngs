@@ -26,8 +26,8 @@ cd exotic-dna-ngs
 - [ ] index genomes 
 - [ ] get test data
 - [ ] test
-- [ ] fastq --> alignement --> qc --> count, sumarise and visualise  
-- [ ] bam --> fastq --> alignement --> qc --> count, sumarise and visualise 
+- [ ] fastq --> alignement --> qc --> count, summarise and visualise  
+- [ ] bam --> fastq --> alignement --> qc --> count, summarise and visualise 
 - [ ] bash and nextflow versions
 - [ ] Docker and Singularity builds
 
