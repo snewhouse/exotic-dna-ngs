@@ -18,6 +18,6 @@ rm ${INSTALL_DIR}/conda_install.sh"
 
 echo "[INFO: $(date)] Running CMD: ${CMD}"
 
-${CMD}
+${CMD} | tee -a ${INSTALL_DIR}/conda-install-$(date +%y%m%d%M).log
 
 export PATH="${INSTALL_DIR}/${CONDA}/bin:${PATH}"
