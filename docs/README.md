@@ -73,7 +73,8 @@ conda install --yes -c bioconda sambamba=0.6.6
 conda install --yes -c bioconda fastqc=0.11.5
 conda install --yes -c bioconda picard=2.9.2
 conda install --yes -c bioconda nextflow=0.25.1
-conda install --yes -c conda-forge awscli=1.11.70
+conda install --yes -c conda-forge botocore
+conda install --yes -c conda-forge awscli
 
 CONDA_PY2_BIN="${HOME}/Miniconda3/envs/py2-ngs/bin"
 ```
