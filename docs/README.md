@@ -51,21 +51,37 @@ rm ./conda_install.sh
 - [ ] b38
 - [ ] b37
 
+```bash
+CMD ... Boom!
+```
+
 ### Non-Human Genomes
 
 - [ ] Viral
 - [ ] bacterial
 - [ ] fungal
 
+```bash
+CMD ... Boom!
+```
+
 ## Index Genomes
 
 - [ ] bwa
 - [ ] hisat2
 
+```bash
+CMD ... Boom!
+```
+
 ## Get Test WGS Data
 
 - [ ] [giab_data_indexes](https://github.com/genome-in-a-bottle/giab_data_indexes)
 - [ ] others
+
+```bash
+CMD ... Boom!
+```
 
 ## Running
 
@@ -82,6 +98,10 @@ CMD ... Boom!
 ```
 
 ## Reporting
+
+```bash
+CMD ... Boom!
+```
 
 - [ ] pretty pictures
 - [ ] count level data per sample & populations
