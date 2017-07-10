@@ -27,6 +27,17 @@ cd exotic-dna-ngs
 - [ ] fastq --> alignement --> qc --> count, sumarise and visualise  
 - [ ] bam --> fastq --> alignement --> qc --> count, sumarise and visualise 
 
+## Install Miniconda3
+
+July 2017 Version: `Miniconda3-4.3.21-Linux-x86_64.sh` 
+
+```bash
+wget https://repo.continuum.io/miniconda/Miniconda3-4.3.21-Linux-x86_64.sh -O ./conda_install.sh && \
+bash ./conda_install.sh -b -p ${HOME}/Miniconda3 && \
+rm ./conda_install.sh
+export PATH="${HOME}/${Miniconda3}/bin:${PATH}
+```
+
 ## Get Reference Genomes
 
 ### Human Genomes
