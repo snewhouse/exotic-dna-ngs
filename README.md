@@ -1,11 +1,10 @@
 # exotic-dna-ngs
+_WIP & POC: Count Viral and other non-human genome signatures in Human NGS data_  
 
 [![DOI](https://zenodo.org/badge/96406831.svg)](https://zenodo.org/badge/latestdoi/96406831) [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.824201.svg)](https://doi.org/10.5281/zenodo.824201)
 
 **VERSION:** 0.1-alhpa  
 **Author:** Dr Stephen J Newhouse; stephen.j.newhouse@gmail.com
-
-_WIP & POC: Count Viral and other non-human genome signatures in Human NGS data_  
 
 ## Aims
 
@@ -41,3 +40,10 @@ The basic questions:
 - bwa mapping pipeline (nextflow): [map-bwa.nf](https://github.com/snewhouse/exotic-dna-ngs/blob/master/src/map-bwa.nf)  
 
 **NOT TESTED!**
+
+
+## Core Contributors
+
+- Stephen J Newhouse
+
+******
