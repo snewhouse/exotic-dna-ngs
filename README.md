@@ -45,7 +45,7 @@ most DNA extraction methods will capture everything (within limits) i.e. its not
 
 ## Core Contributors
 
-- Stephen J Newhouse | stephen.j.newhouse@gmail.com | [snewhouse](https://github.com/snewhouse) | [@s_j_newhouse(https://twitter.com/s_j_newhouse)
+- Stephen J Newhouse | stephen.j.newhouse@gmail.com | [snewhouse](https://github.com/snewhouse) | [@s_j_newhouse](https://twitter.com/s_j_newhouse)
 
 ******
 
