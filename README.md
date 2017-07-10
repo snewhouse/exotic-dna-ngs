@@ -20,11 +20,11 @@ naive measure of the presence or absence of viral/other DNA in the first instanc
 treated as count data, and used to produce some measure of quantification akin to RNA-seq based quantification methods 
 e.g. TPM. 
 
-The motivation: We are not alone. Things live in and on us and increasing evidence is pointing towards the importance of our microbiome 
+**The motivation:** We are not alone. Things live in and on us and increasing evidence is pointing towards the importance of our microbiome 
 in disease and health. Plus, DNA extraction is not perfect - unless specifically designed to enrich for human DNA, 
 most DNA extraction methods will capture everything (within limits) i.e. its not just human DNA in your sample prep!.
 
-The basic questions: 
+**The basic questions:** 
 
 - Can we detect other DNA in WGS NGS data?
 - What is the origin of this DNA (Viral, bacterial, fungal, other...)?
@@ -34,6 +34,7 @@ The basic questions:
     - disease groups (case v control)
     - geography
     - ...any other groups you can think off?
+        
 
 ## The Docs
 - WIP: see [Docs](https://github.com/snewhouse/exotic-dna-ngs/tree/master/docs)  
