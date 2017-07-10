@@ -69,7 +69,20 @@ rm ./conda_install.sh
 
 ## Running
 
+- [ ] fastq
 
 ```bash
 CMD ... Boom!
 ```
+
+- [ ] bam
+
+```bash
+CMD ... Boom!
+```
+
+## Reporting
+
+- [ ] pretty pictures
+- [ ] count level data per sample & populations
+- [ ] better way of presenting count level data...
