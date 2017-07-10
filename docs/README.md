@@ -24,6 +24,8 @@ cd exotic-dna-ngs
 - [ ] index genomes 
 - [ ] get test data
 - [ ] test
+- [ ] fastq --> alignement --> qc --> count, sumarise and visualise  
+- [ ] bam --> fastq --> alignement --> qc --> count, sumarise and visualise 
 
 ## Get Reference Genomes
 
