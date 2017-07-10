@@ -45,7 +45,7 @@ rm ./conda_install.sh
 ## Config Conda and Install NGS Tools
 
 ```bash
-export PATH="${HOME}/Miniconda3/bin:${PATH}
+export PATH="${HOME}/Miniconda3/bin:${PATH}"
 ```
 
 ```bash
@@ -64,16 +64,18 @@ source activate py2-ngs
 ```
 
 ```bash
-conda install -c bioconda ncbi-genome-download=0.2.4
-conda install -c bioconda hisat2=2.1.0
-conda install -c bioconda bwa=0.7.15
-conda install -c bioconda samtools=1.5
-conda install -c bioconda samblaster=0.1.24
-conda install -c bioconda sambamba=0.6.6
-conda install -c bioconda fastqc=0.11.5
-conda install -c bioconda picard=2.9.2
-conda install -c bioconda nextflow=0.25.1
-conda install -c conda-forge awscli=1.11.70
+conda install --yes -c bioconda ncbi-genome-download=0.2.4
+conda install --yes -c bioconda hisat2=2.1.0
+conda install --yes -c bioconda bwa=0.7.15
+conda install --yes -c bioconda samtools=1.5
+conda install --yes -c bioconda samblaster=0.1.24
+conda install --yes -c bioconda sambamba=0.6.6
+conda install --yes -c bioconda fastqc=0.11.5
+conda install --yes -c bioconda picard=2.9.2
+conda install --yes -c bioconda nextflow=0.25.1
+conda install --yes -c conda-forge awscli=1.11.70
+
+CONDA_PY2_BIN="${HOME}/Miniconda3/envs/py2-ngs/bin"
 ```
 
 ## Get Reference Genomes
