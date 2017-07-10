@@ -13,11 +13,12 @@ CONDA_BASH_INSTALL="${CONDA}-${CONDA_VERSION}-${ARCH}.sh"
 
 # install
 CMD="wget --quiet -nc ${MINICONDA_URL}/${CONDA_BASH_INSTALL} -O ${INSTALL_DIR}/conda_install.sh && \
-bash ${INSTALL_DIR}/conda_install.sh -b -p ${INSTALL_DIR}/${CONDA} && \
-rm ${INSTALL_DIR}/conda_install.sh"
+bash ${INSTALL_DIR}/conda_install.sh -b -p ${INSTALL_DIR}/${CONDA}"
 
 echo "[INFO: $(date)] Running CMD: ${CMD}"
 
 ${CMD} | tee -a ${INSTALL_DIR}/conda-install-$(date +%y%m%d%M).log
 
 export PATH="${INSTALL_DIR}/${CONDA}/bin:${PATH}"
+
+rm -v ${INSTALL_DIR}/conda_install.sh
