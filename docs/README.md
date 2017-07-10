@@ -55,6 +55,11 @@ rm ./conda_install.sh
 - [ ] bacterial
 - [ ] fungal
 
+## Index Genomes
+
+- [ ] bwa
+- [ ] hisat2
+
 ## Get Test WGS Data
 
 - [ ] [giab_data_indexes](https://github.com/genome-in-a-bottle/giab_data_indexes)
