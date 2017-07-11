@@ -95,19 +95,19 @@ CONDA_PY2_BIN="${HOME}/Miniconda3/envs/py2-ngs/bin"
 - ftp://ftp.ncbi.nlm.nih.gov/genomes/genbank/vertebrate_mammalian/Homo_sapiens/latest_assembly_versions/GCA_000001405.26_GRCh38.p11/GCA_000001405.26_GRCh38.p11_assembly_report.txt  
 
 
-> .# Assembly name:  GRCh38.p11
-  .# Description:    Genome Reference Consortium Human Build 38 patch release 11 (GRCh38.p11)
-  .# Organism name:  Homo sapiens (human)
-  .# Taxid:          9606
-  .# BioProject:     PRJNA31257
-  .# Submitter:      Genome Reference Consortium
-  .# Date:           2017-6-14
-  .# Assembly type:  haploid-with-alt-loci
-  .# Release type:   patch
-  .# Assembly level: Chromosome
-  .# Genome representation: full
-  .# RefSeq category: Reference Genome
-  .# GenBank assembly accession: GCA_000001405.26
+> .# Assembly name:  GRCh38.p11  
+  .# Description:    Genome Reference Consortium Human Build 38 patch release 11 (GRCh38.p11)  
+  .# Organism name:  Homo sapiens (human)  
+  .# Taxid:          9606  
+  .# BioProject:     PRJNA31257  
+  .# Submitter:      Genome Reference Consortium  
+  .# Date:           2017-6-14  
+  .# Assembly type:  haploid-with-alt-loci  
+  .# Release type:   patch  
+  .# Assembly level: Chromosome  
+  .# Genome representation: full  
+  .# RefSeq category: Reference Genome  
+  .# GenBank assembly accession: GCA_000001405.26  
 
 
 - ftp://ftp.ncbi.nlm.nih.gov/genomes/refseq/vertebrate_mammalian/Homo_sapiens/latest_assembly_versions/  
