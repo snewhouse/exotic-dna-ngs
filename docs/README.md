@@ -90,6 +90,7 @@ CONDA_PY2_BIN="${HOME}/Miniconda3/envs/py2-ngs/bin"
 - ftp://ftp.ncbi.nlm.nih.gov/genbank/genomes/Eukaryotes/vertebrates_mammals/Homo_sapiens/GRCh38/seqs_for_alignment_pipelines/README_ANALYSIS_SETS  
 - ftp://ftp.ncbi.nlm.nih.gov/genbank/genomes/README.txt (it all moved)  
 - ftp://ftp.ncbi.nlm.nih.gov/genomes/genbank/  
+- ftp://ftp.ncbi.nlm.nih.gov/genomes/genbank/vertebrate_mammalian/Homo_sapiens/README.txt  
 
 ```bash
 CMD ... Boom!
