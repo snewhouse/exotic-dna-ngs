@@ -84,7 +84,6 @@ CONDA_PY2_BIN="${HOME}/Miniconda3/envs/py2-ngs/bin"
 ### Human Genomes
 
 - [ ] b38
-- [ ] b37
 
 - ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/  
 - ftp://ftp.ncbi.nlm.nih.gov/genbank/genomes/Eukaryotes/vertebrates_mammals/Homo_sapiens/GRCh38/seqs_for_alignment_pipelines/README_ANALYSIS_SETS  
@@ -96,6 +95,7 @@ CONDA_PY2_BIN="${HOME}/Miniconda3/envs/py2-ngs/bin"
 - ftp://ftp.ncbi.nlm.nih.gov/genomes/refseq/vertebrate_mammalian/Homo_sapiens/latest_assembly_versions/  
 - ftp://ftp.ncbi.nlm.nih.gov/genomes/refseq/vertebrate_mammalian/Homo_sapiens/latest_assembly_versions/GCF_000306695.2_CHM1_1.1/GCF_000306695.2_CHM1_1.1_genomic.fna.gz
 
+- [ ] b37
 
 ```bash
 CMD ... Boom!
