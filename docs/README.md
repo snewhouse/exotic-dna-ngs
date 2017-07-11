@@ -93,6 +93,9 @@ CONDA_PY2_BIN="${HOME}/Miniconda3/envs/py2-ngs/bin"
 - ftp://ftp.ncbi.nlm.nih.gov/genomes/genbank/vertebrate_mammalian/Homo_sapiens/README.txt  
 - ftp://ftp.ncbi.nlm.nih.gov/genomes/genbank/vertebrate_mammalian/Homo_sapiens/latest_assembly_versions/GCA_000001405.26_GRCh38.p11/README.txt  
 - ftp://ftp.ncbi.nlm.nih.gov/genomes/genbank/vertebrate_mammalian/Homo_sapiens/latest_assembly_versions/GCA_000001405.26_GRCh38.p11/GCA_000001405.26_GRCh38.p11_genomic.fna.gz
+- ftp://ftp.ncbi.nlm.nih.gov/genomes/refseq/vertebrate_mammalian/Homo_sapiens/latest_assembly_versions/  
+- ftp://ftp.ncbi.nlm.nih.gov/genomes/refseq/vertebrate_mammalian/Homo_sapiens/latest_assembly_versions/GCF_000306695.2_CHM1_1.1/GCF_000306695.2_CHM1_1.1_genomic.fna.gz
+
 
 ```bash
 CMD ... Boom!
