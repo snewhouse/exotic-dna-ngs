@@ -82,7 +82,7 @@ CONDA_PY2_BIN="${HOME}/Miniconda3/envs/py2-ngs/bin"
 ## Get Reference Genomes
 
 ### Human Genomes
-
+- ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/  
 - [ ] b38
 - [ ] b37
 
