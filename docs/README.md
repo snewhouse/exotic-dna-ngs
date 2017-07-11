@@ -82,9 +82,14 @@ CONDA_PY2_BIN="${HOME}/Miniconda3/envs/py2-ngs/bin"
 ## Get Reference Genomes
 
 ### Human Genomes
-- ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/  
+
 - [ ] b38
 - [ ] b37
+
+- ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/GRCh38_reference_genome/  
+- ftp://ftp.ncbi.nlm.nih.gov/genbank/genomes/Eukaryotes/vertebrates_mammals/Homo_sapiens/GRCh38/seqs_for_alignment_pipelines/README_ANALYSIS_SETS  
+- ftp://ftp.ncbi.nlm.nih.gov/genbank/genomes/README.txt (it all moved)  
+- ftp://ftp.ncbi.nlm.nih.gov/genomes/genbank/  
 
 ```bash
 CMD ... Boom!
