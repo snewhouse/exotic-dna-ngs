@@ -37,7 +37,7 @@ most DNA extraction methods will capture everything (within limits) i.e. its not
         
 
 > What about [Kraken](https://ccb.jhu.edu/software/kraken/) and other awesome things like [sourmash](http://sourmash.readthedocs.io/)!? I here you say. Well, they are awesome, but compute and memory
-intensive...I have yet to play with `sourmash`, but I will. I want to provide something a little less "hungry" and try and kill two birds with one stone i.e the increase in accuracy in read alignment and variant calling gained from having "decoy" genomes in the mix. Here the decoy genomes are the viral+everything else. Hah - but, its NGS data and re-inventing the wheel and blah blah blah! I hear you say...let's see how this all turns out. 
+intensive...I have yet to play with `sourmash`, but I will. I want to provide something a little less "hungry" and try and kill two birds with one stone i.e the increase in accuracy in read alignment and variant calling gained from having "decoy" genomes in the mix, and, try and query the metagenome, all at the same time. Here the decoy genomes are the viral+everything else. Hah - but, its NGS data, and will be compute intensive, and requires dowloading the world of geomes and re-inventing the wheel and blah blah blah - I hear you say again...let's see how this all turns out. 
 
 ## The Docs
 - WIP: see [Docs](https://github.com/snewhouse/exotic-dna-ngs/tree/master/docs)  
