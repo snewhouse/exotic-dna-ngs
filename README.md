@@ -36,9 +36,8 @@ most DNA extraction methods will capture everything (within limits) i.e. its not
     - ...any other groups you can think off?
         
 
-> What about [Kraken](https://ccb.jhu.edu/software/kraken/)!? I here you say...well, it is awesome, but compute and memory
-intensive. I want to provide something a little less "hungry". Hah - but, its NGS data!!! I hear you say again...let's see 
-how this all turns out. 
+> What about [Kraken](https://ccb.jhu.edu/software/kraken/) and other awesome things like [sourmash](http://sourmash.readthedocs.io/)!? I here you say. Well, they are awesome, but compute and memory
+intensive...I have yet to play with `sourmash`, but I will. I want to provide something a little less "hungry" and try and kill two birds with one stone i.e the increase in accuracy in read alignment and variant calling gained from having "decoy" genomes in the mix. Here the decoy genomes are the viral+everything else. Hah - but, its NGS data and re-inventing the wheel and blah blah blah! I hear you say...let's see how this all turns out. 
 
 ## The Docs
 - WIP: see [Docs](https://github.com/snewhouse/exotic-dna-ngs/tree/master/docs)  
@@ -55,6 +54,26 @@ how this all turns out.
 
 Full list at [Contributors](https://github.com/snewhouse/exotic-dna-ngs/blob/master/CONTRIBUTERS.md)
 
+
+## Contributing
+
+Here’s how we suggest you go about proposing a change to this project:
+
+1. [Fork this project][fork] to your account.
+2. [Create a branch][branch] for the change you intend to make.
+3. Make your changes to your fork.
+4. [Send a pull request][pr] from your fork’s branch to our `master` branch.
+
+Using the web-based interface to make changes is fine too, and will help you
+by automatically forking the project and prompting to send a pull request too.
+
+[fork]: https://help.github.com/articles/fork-a-repo/
+[branch]: https://help.github.com/articles/creating-and-deleting-branches-within-your-repository
+[pr]: https://help.github.com/articles/using-pull-requests/
+
+
+## Licence 
+- [MIT](./LICENSE.txt)
 ******
 
 <p align="center">
