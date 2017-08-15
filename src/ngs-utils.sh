@@ -10,7 +10,11 @@ get_broad_genomes(){
     readonly PROGNAME=$(basename $0)
     readonly PROGDIR=$(readlink -m $(dirname $0))
     readonly ARGS="$@"
-    local ECHO_BASE="[`date`][${PROGNAME}:${VERSION}]"
+    readonly ECHO_BASE="[`date`][${PROGNAME}:${VERSION}]"
+    readonly ECHO_INFO="${ECHO_BASE}  [ INFO]:"
+    readonly ECHO_ERROR="${ECHO_BASE} [ERROR]:"
+    readonly ECHO_USAGE="${ECHO_BASE} [USAGE]:"
+
 
     #--------------------------------------------------#
     # wget commands
@@ -22,23 +26,26 @@ get_broad_genomes(){
 	local USAGE="get_broad_genomes <b38|b37|b37d|hg19> <fasta|bundle> </PATH/TO/GENOME/DIR>}"
 
 	# test if arg present
-	if [[ $# -eq 0 ]]; then
-	    echo "${ECHO_BASE} [   ERROR]: No arguments supplied"
-	    echo "${ECHO_BASE} [   USAGE]: ${USAGE}"
+	if [[ $# -lt 3 ]]; then
+	    echo "${ECHO_ERROR} Check arguments supplied"
+	    echo "${ECHO_USAGE} ${USAGE}"
 	    exit 1
 	else
-	    echo "${ECHO_BASE} [    INFO]: ${ARGS}"
+	    echo "${ECHO_INFO} ${ARGS}"
 	fi
 
 	#--------------------------------------------------#
 	# set reference genome to get
 	local GENOME=${1:-"b38"} # default b38
+	ehco "${ECHO_INFO} GENOME:${GENOME}"
 
 	# set fasta or bundle
 	local BUNDLE=${2:-"fasta"} # default fasta only
+	ehco "${ECHO_INFO} BUNDLE:${BUNDLE}"
 
 	# set download directory
     local GENOME_DIR=${3:-"/home/${user}/data/genomes/human"}
+    ehco "${ECHO_INFO} GENOME_DIR:${GENOME_DIR}"
 
 
     #--------------------------------------------------#
@@ -57,11 +64,10 @@ get_broad_genomes(){
     #--------------------------------------------------#
     # make dir if needed
 	if [[ ! -d "${GENOME_DIR}" ]]; then
-        echo "Can't find ${GENOME_DIR}"
+        echo "${ECHO_BASE} [    INFO]: Can't find ${GENOME_DIR}"
         echo "Creating ${GENOME_DIR}"
         local CMD0="mkdir -p ${GENOME_DIR}"
         ${CMD0}
-    elif
     else
     fi
 
