@@ -48,7 +48,7 @@ get_broad_genomes(){
 
 	#--------------------------------------------------#
 	# arg 3 download directory
-    local GENOME_DIR=${3:-"/home/${USER}/data/genomes/human"}
+    local GENOME_DIR=${3:-"/home/${USER}/data/genomes/human/${GENOME}"}
 
     #--------------------------------------------------#
     # reference genome fasta files ftp address
