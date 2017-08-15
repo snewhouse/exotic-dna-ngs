@@ -9,8 +9,8 @@ get_broad_genomes(){
 	#--------------------------------------------------#
 	# args
     readonly VERSION="v0.1-08.17"
-    readonly PROGNAME=$(basename $0)
-    readonly PROGDIR=$(readlink -m $(dirname $0))
+    readonly PROGNAME="$(basename $0)"
+    readonly PROGDIR="$(readlink -m $(dirname $0))"
     readonly ARGS="$@"
     readonly ECHO_BASE="[`date`][${PROGNAME}:${VERSION}]"
     readonly ECHO_INFO="${ECHO_BASE}  [ INFO]:"
