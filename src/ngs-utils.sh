@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-
+set -e
 # A selection of scripts
 
 ###-----------------------------------------------------------------------------------------------------------------###
@@ -18,8 +18,8 @@ get_broad_genomes(){
 
     #--------------------------------------------------#
     # wget commands
-    readonly WGET_DIRS="wget -r -nH --no-parent --reject "index.html*" -e robots=off"
-    readonly WGET_FILE="wget -nc -e robots=off"
+    local WGET_DIRS="wget -r -nH --no-parent --reject "index.html*" -e robots=off"
+    local WGET_FILE="wget -nc -e robots=off"
 
 	#--------------------------------------------------#
 	# usage
@@ -28,9 +28,9 @@ get_broad_genomes(){
     #--------------------------------------------------#
 	# test if arg present
 	if [[ $# -eq 0 ]]; then
-	    echo "${ECHO_ERROR} Check arguments supplied"
+	    echo "${ECHO_ERROR} Check arguments supplied: [${ARGS}]"
 	    echo "${ECHO_USAGE} ${USAGE}"
-	    exit 1
+	    #exit 1
 	else
 	    echo "${ECHO_INFO} ${PROGNAME} ${ARGS}"
 	fi
