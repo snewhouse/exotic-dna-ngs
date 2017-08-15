@@ -120,7 +120,7 @@ get_broad_genomes(){
     # make b37 bundle list as we do not want the big bam
 
 # START LIST >>>
-b37_list="
+local b37_list="
 ftp://gsapubftp-anonymous@ftp.broadinstitute.org/bundle/b37/human_g1k_v37.fasta.fai.gz
 ftp://gsapubftp-anonymous@ftp.broadinstitute.org/bundle/b37/human_g1k_v37_decoy.fasta.fai.gz
 ftp://gsapubftp-anonymous@ftp.broadinstitute.org/bundle/b37/human_g1k_v37.dict.gz
