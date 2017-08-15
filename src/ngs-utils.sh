@@ -13,7 +13,7 @@ get_broad_genomes(){
     local PROGDIR="$(readlink -m $(dirname $0))"
     local ARGS="$@"
     local ECHO_BASE="[`date`][${PROGNAME}:${VERSION}]"
-    local ECHO_INFO="${ECHO_BASE}  [ INFO]:"
+    local ECHO_INFO="${ECHO_BASE} [ INFO]:"
     local ECHO_ERROR="${ECHO_BASE} [ERROR]:"
     local ECHO_USAGE="${ECHO_BASE} [USAGE]:"
 
