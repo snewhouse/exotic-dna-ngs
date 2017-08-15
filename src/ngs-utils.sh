@@ -33,7 +33,6 @@ get_broad_genomes(){
 	    #exit 1
 	else
 	    echo "${ECHO_INFO} ${PROGNAME} ${ARGS}"
-	fi
 
 	#--------------------------------------------------#
 	# arg 1 reference genome to get
@@ -208,4 +207,6 @@ ftp://gsapubftp-anonymous@ftp.broadinstitute.org/bundle/b37/1000G_phase1.snps.hi
         echo "BUNDLE BOOM!"
         cd
      fi
+
+	fi
 }
