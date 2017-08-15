@@ -18,6 +18,9 @@ usage:
 get_broad_genomes <b38|b37|b37d|hg19> <fasta|bundle> </PATH/TO/GENOME/DIR>
 ```
 
+Tested:
+ - hg19 fasta
+
 *****
 
 ## To do
