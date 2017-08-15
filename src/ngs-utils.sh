@@ -35,18 +35,18 @@ get_broad_genomes(){
 	fi
 
 	#--------------------------------------------------#
-	# set reference genome to get
+	# arg 1 reference genome to get
 	local GENOME=${1:-"b38"} # default b38
 	ehco "${ECHO_INFO} GENOME:${GENOME}"
 
-	# set fasta or bundle
+    #--------------------------------------------------#
+	# arg 2 fasta or bundle
 	local BUNDLE=${2:-"fasta"} # default fasta only
 	ehco "${ECHO_INFO} BUNDLE:${BUNDLE}"
 
-	# set download directory
+	#--------------------------------------------------#
+	# arg 3 download directory
     local GENOME_DIR=${3:-"/home/${user}/data/genomes/human"}
-    ehco "${ECHO_INFO} GENOME_DIR:${GENOME_DIR}"
-
 
     #--------------------------------------------------#
     # reference genome fasta files ftp address
@@ -61,14 +61,16 @@ get_broad_genomes(){
     local b38_broad_bundle="ftp://gsapubftp-anonymous@ftp.broadinstitute.org/bundle/hg38/"
     local hg19_broad_bundle="ftp://gsapubftp-anonymous@ftp.broadinstitute.org/bundle/hg19/"
 
+
     #--------------------------------------------------#
-    # make dir if needed
+    # make GENOME_DIR if needed
 	if [[ ! -d "${GENOME_DIR}" ]]; then
-        echo "${ECHO_BASE} [    INFO]: Can't find ${GENOME_DIR}"
-        echo "Creating ${GENOME_DIR}"
+        echo "${ECHO_ERROR} Can't find ${GENOME_DIR}"
+        echo "${ECHO_INFO} Creating ${GENOME_DIR}"
         local CMD0="mkdir -p ${GENOME_DIR}"
         ${CMD0}
     else
+        ehco "${ECHO_INFO} GENOME_DIR:${GENOME_DIR}"
     fi
 
     #--------------------------------------------------#
@@ -82,28 +84,28 @@ get_broad_genomes(){
         local FASTA="${GENOME_DIR}/human.${GENOME}.fasta.gz"
         local CMD0="${WGET_FILE} -O ${FASTA} ${URL}"
         cd ${GENOME_DIR}
-        echo ${WGET_MESSAGE}
+        echo "${ECHO_INFO} ${WGET_MESSAGE}"
         ${CMD0}
     elif [[ "${GENOME}" == "b38" && "${BUNDLE}" == "fasta" ]]; then
         local URL=${b38_broad_fasta}
         local FASTA="${GENOME_DIR}/human.${GENOME}.fasta.gz"
         local CMD0="${WGET_FILE} -O ${FASTA} ${URL}"
         cd ${GENOME_DIR}
-        echo ${WGET_MESSAGE}
+        echo "${ECHO_INFO} ${WGET_MESSAGE}"
         ${CMD0}
     elif [[ "${GENOME}" == "b37d" && "${BUNDLE}" == "fasta" ]]; then
         local URL=${b37_decoy_broad_fasta}
         local FASTA="${GENOME_DIR}/human.${GENOME}_decoy.fasta.gz"
         local CMD0="${WGET_FILE} -O ${FASTA} ${URL}"
         cd ${GENOME_DIR}
-        echo ${WGET_MESSAGE}
+        echo "${ECHO_INFO} ${WGET_MESSAGE}"
         ${CMD0}
     elif [[ "${GENOME}" == "hg19" && "${BUNDLE}" == "fasta" ]]; then
         local URL=${hg19_broad_fasta}
         local FASTA="${GENOME_DIR}/human.ucsc.${GENOME}.fasta.gz"
         local CMD0="${WGET_FILE} -O ${FASTA} ${URL}"
         cd ${GENOME_DIR}
-        echo ${WGET_MESSAGE}
+        echo "${ECHO_INFO} ${WGET_MESSAGE}"
         ${CMD0}
      else
          echo "FASTA BOOM!"
@@ -159,25 +161,25 @@ ftp://gsapubftp-anonymous@ftp.broadinstitute.org/bundle/b37/1000G_phase1.snps.hi
         local CMD0="${WGET_FILE} -i ${b37_list}" # download from b37_list
         mkdir ${GENOME_DIR}/${GENOME}
         cd ${GENOME_DIR}/${GENOME}
-        echo ${WGET_MESSAGE}
+        echo "${ECHO_INFO} ${WGET_MESSAGE}"
         ${CMD0}
     elif [[ "${GENOME}" == "b38" && "${BUNDLE}" == "bundle" ]]; then
         local URL=${b38_broad_bundle}
         local CMD0="${WGET_DIRS} ${URL}"
         cd ${GENOME_DIR}
-        echo ${WGET_MESSAGE}
+        echo "${ECHO_INFO} ${WGET_MESSAGE}"
         ${CMD0}
     elif [[ "${GENOME}" == "b37d" && "${BUNDLE}" == "bundle" ]]; then
         local CMD0="${WGET_FILE} -i ${b37_list}" # download from b37_list
         mkdir ${GENOME_DIR}/${GENOME}
         cd ${GENOME_DIR}/${GENOME}
-        echo ${WGET_MESSAGE}
+        echo "${ECHO_INFO} ${WGET_MESSAGE}"
         ${CMD0}
     elif [[ "${GENOME}" == "hg19" && "${BUNDLE}" == "bundle" ]]; then
         local URL=${hg19_broad_bundle}
         local CMD0="${WGET_DIRS} ${URL}"
         cd ${GENOME_DIR}
-        echo ${WGET_MESSAGE}
+        echo "${ECHO_INFO} ${WGET_MESSAGE}"
         ${CMD0}
      else
          echo "BUNDLE BOOM!"
