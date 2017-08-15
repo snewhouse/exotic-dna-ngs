@@ -8,7 +8,7 @@ source ngs-utils.sh
 
 - [get_broad_genomes](#get_broad_genomes) : download human reference genome fasta or entire GATK bundle. 
 
-## get_broad_genomes
+### get_broad_genomes
 
 ```bash
 get_broad_genomes <b38|b37|b37d|hg19> <fasta|bundle> </PATH/TO/GENOME/DIR>
@@ -19,4 +19,5 @@ get_broad_genomes <b38|b37|b37d|hg19> <fasta|bundle> </PATH/TO/GENOME/DIR>
 ## To do
 
 - [ ] rg_illumina_machine  
-- [ ] rg_illumina_flowcell  
+- [ ] rg_illumina_flowcell 
+- [ ] rg_illumina_run   
