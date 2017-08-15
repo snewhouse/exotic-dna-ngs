@@ -70,64 +70,6 @@ get_broad_genomes(){
     local b38_broad_bundle="ftp://gsapubftp-anonymous@ftp.broadinstitute.org/bundle/hg38/"
     local hg19_broad_bundle="ftp://gsapubftp-anonymous@ftp.broadinstitute.org/bundle/hg19/"
 
-
-    #--------------------------------------------------#
-    # make GENOME_DIR if needed
-	if [[ ! -d "${GENOME_DIR}" ]]; then
-        echo "${ECHO_ERROR} Can't find ${GENOME_DIR}"
-        echo "${ECHO_INFO} Creating ${GENOME_DIR}"
-        local CMD0="mkdir -p ${GENOME_DIR}"
-        ${CMD0}
-    else
-        echo "${ECHO_INFO} GENOME_DIR:${GENOME_DIR}"
-    fi
-
-    #--------------------------------------------------#
-    # message
-    local WGET_MESSAGE="Downloading ${GENOME} ${BUNDLE} to ${GENOME_DIR}"
-
-    #--------------------------------------------------#
-    # get fastas
-    if [[ "${GENOME}" == "b37" && "${BUNDLE}" == "fasta" ]]; then
-        local URL=${b37_broad_fasta}
-        local FASTA="${GENOME_DIR}/human.${GENOME}.fasta.gz"
-        local CMD0="${WGET_FILE} -O ${FASTA} ${URL}"
-        cd ${GENOME_DIR}
-        echo "${ECHO_INFO} ${WGET_MESSAGE}"
-        ${CMD0}
-        cd
-    elif [[ "${GENOME}" == "b38" && "${BUNDLE}" == "fasta" ]]; then
-        local URL=${b38_broad_fasta}
-        local FASTA="${GENOME_DIR}/human.${GENOME}.fasta.gz"
-        local CMD0="${WGET_FILE} -O ${FASTA} ${URL}"
-        cd ${GENOME_DIR}
-        echo "${ECHO_INFO} ${WGET_MESSAGE}"
-        ${CMD0}
-        cd
-    elif [[ "${GENOME}" == "b37d" && "${BUNDLE}" == "fasta" ]]; then
-        local URL=${b37_decoy_broad_fasta}
-        local FASTA="${GENOME_DIR}/human.${GENOME}_decoy.fasta.gz"
-        local CMD0="${WGET_FILE} -O ${FASTA} ${URL}"
-        cd ${GENOME_DIR}
-        echo "${ECHO_INFO} ${WGET_MESSAGE}"
-        ${CMD0}
-        cd
-    elif [[ "${GENOME}" == "hg19" && "${BUNDLE}" == "fasta" ]]; then
-        local URL=${hg19_broad_fasta}
-        local FASTA="${GENOME_DIR}/human.ucsc.${GENOME}.fasta.gz"
-        local CMD0="${WGET_FILE} -O ${FASTA} ${URL}"
-        cd ${GENOME_DIR}
-        echo "${ECHO_INFO} ${WGET_MESSAGE}"
-        ${CMD0}
-        cd
-     else
-         echo "${ECHO_ERROR} Check arguments supplied"
-         echo "${ECHO_USAGE} ${USAGE}"
-         echo "FASTA BOOM!"
-         cd
-     fi
-
-
     #--------------------------------------------------#
     # make b37 bundle list as we do not want the big bam
 
@@ -172,8 +114,55 @@ ftp://gsapubftp-anonymous@ftp.broadinstitute.org/bundle/b37/1000G_phase1.snps.hi
 # END LIST <<<
 
     #--------------------------------------------------#
-    # get bundles
-    if [[ "${GENOME}" == "b37" && "${BUNDLE}" == "bundle" ]]; then
+    # make GENOME_DIR if needed
+	if [[ ! -d "${GENOME_DIR}" ]]; then
+        echo "${ECHO_ERROR} Can't find ${GENOME_DIR}"
+        echo "${ECHO_INFO} Creating ${GENOME_DIR}"
+        local CMD0="mkdir -p ${GENOME_DIR}"
+        ${CMD0}
+    else
+        echo "${ECHO_INFO} GENOME_DIR:${GENOME_DIR}"
+    fi
+
+    #--------------------------------------------------#
+    # message
+    local WGET_MESSAGE="Downloading ${GENOME} ${BUNDLE} to ${GENOME_DIR}"
+
+    #--------------------------------------------------#
+    # get fastas or bundle
+    if [[ "${GENOME}" == "b37" && "${BUNDLE}" == "fasta" ]]; then
+        local URL=${b37_broad_fasta}
+        local FASTA="${GENOME_DIR}/human.${GENOME}.fasta.gz"
+        local CMD0="${WGET_FILE} -O ${FASTA} ${URL}"
+        cd ${GENOME_DIR}
+        echo "${ECHO_INFO} ${WGET_MESSAGE}"
+        ${CMD0}
+        cd
+    elif [[ "${GENOME}" == "b38" && "${BUNDLE}" == "fasta" ]]; then
+        local URL=${b38_broad_fasta}
+        local FASTA="${GENOME_DIR}/human.${GENOME}.fasta.gz"
+        local CMD0="${WGET_FILE} -O ${FASTA} ${URL}"
+        cd ${GENOME_DIR}
+        echo "${ECHO_INFO} ${WGET_MESSAGE}"
+        ${CMD0}
+        cd
+    elif [[ "${GENOME}" == "b37d" && "${BUNDLE}" == "fasta" ]]; then
+        local URL=${b37_decoy_broad_fasta}
+        local FASTA="${GENOME_DIR}/human.${GENOME}_decoy.fasta.gz"
+        local CMD0="${WGET_FILE} -O ${FASTA} ${URL}"
+        cd ${GENOME_DIR}
+        echo "${ECHO_INFO} ${WGET_MESSAGE}"
+        ${CMD0}
+        cd
+    elif [[ "${GENOME}" == "hg19" && "${BUNDLE}" == "fasta" ]]; then
+        local URL=${hg19_broad_fasta}
+        local FASTA="${GENOME_DIR}/human.ucsc.${GENOME}.fasta.gz"
+        local CMD0="${WGET_FILE} -O ${FASTA} ${URL}"
+        cd ${GENOME_DIR}
+        echo "${ECHO_INFO} ${WGET_MESSAGE}"
+        ${CMD0}
+        cd
+    elif [[ "${GENOME}" == "b37" && "${BUNDLE}" == "bundle" ]]; then
         local CMD0="${WGET_FILE} -i ${b37_list}" # download from b37_list
         mkdir ${GENOME_DIR}/${GENOME}
         cd ${GENOME_DIR}/${GENOME}
@@ -202,11 +191,10 @@ ftp://gsapubftp-anonymous@ftp.broadinstitute.org/bundle/b37/1000G_phase1.snps.hi
         ${CMD0}
         cd
      else
-        echo "${ECHO_ERROR} Check arguments supplied"
-        echo "${ECHO_USAGE} ${USAGE}"
-        echo "BUNDLE BOOM!"
-        cd
+         echo "${ECHO_ERROR} Check arguments supplied"
+         echo "${ECHO_USAGE} ${USAGE}"
+         echo "BOOM!"
+         cd
      fi
-
-	fi
+    fi
 }
