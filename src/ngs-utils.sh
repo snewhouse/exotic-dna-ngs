@@ -28,7 +28,7 @@ get_broad_genomes(){
 
     #--------------------------------------------------#
 	# test if arg present
-	if [[ $# -lt 2 ]]; then
+	if [[ $# -eq 0 ]]; then
 	    echo "${ECHO_ERROR} Check arguments supplied"
 	    echo "${ECHO_USAGE} ${USAGE}"
 	else
