@@ -9,8 +9,7 @@ get_broad_genomes(){
 	#--------------------------------------------------#
 	# args n stuff
     local VERSION="v0.1-08.17"
-    local PROGNAME="$(basename $0)"
-    local PROGDIR="$(readlink -m $(dirname $0))"
+    local PROGNAME="get_broad_genomes"
     local ARGS="$@"
     local ECHO_BASE="[`date`][${PROGNAME}:${VERSION}]"
     local ECHO_INFO="${ECHO_BASE} [ INFO]:"
