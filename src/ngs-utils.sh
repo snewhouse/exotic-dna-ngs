@@ -8,14 +8,14 @@
 get_broad_genomes(){
 	#--------------------------------------------------#
 	# args
-    readonly VERSION="v0.1-08.17"
-    readonly PROGNAME="$(basename $0)"
-    readonly PROGDIR="$(readlink -m $(dirname $0))"
-    readonly ARGS="$@"
-    readonly ECHO_BASE="[`date`][${PROGNAME}:${VERSION}]"
-    readonly ECHO_INFO="${ECHO_BASE}  [ INFO]:"
-    readonly ECHO_ERROR="${ECHO_BASE} [ERROR]:"
-    readonly ECHO_USAGE="${ECHO_BASE} [USAGE]:"
+    local VERSION="v0.1-08.17"
+    local PROGNAME="$(basename $0)"
+    local PROGDIR="$(readlink -m $(dirname $0))"
+    local ARGS="$@"
+    local ECHO_BASE="[`date`][${PROGNAME}:${VERSION}]"
+    local ECHO_INFO="${ECHO_BASE}  [ INFO]:"
+    local ECHO_ERROR="${ECHO_BASE} [ERROR]:"
+    local ECHO_USAGE="${ECHO_BASE} [USAGE]:"
 
 
     #--------------------------------------------------#
