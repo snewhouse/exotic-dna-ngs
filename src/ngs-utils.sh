@@ -49,10 +49,10 @@ get_broad_genomes(){
 	# arg 3 download directory
     local GENOME_DIR=${3:-"/home/${USER}/data/genomes/human/${GENOME}"}
 
-    list_() {
+    list_genomes(){
         local LOG_DIR=${1}
         local LOG_NAME=${2}
-        local TIME_STAMP="$(date)"
+        local TIME_STAMP="$(date +%Y%m%d.%H.%M)"
         ls -l . > ${LOG_NAME}.${TIME_STAMP}.log
     }
 
