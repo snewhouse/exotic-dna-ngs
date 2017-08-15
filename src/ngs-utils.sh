@@ -2,7 +2,9 @@
 
 # A selection of scripts
 
+###-----------------------------------------------------------------------------------------------------------------###
 # get_broad_genomes function
+###-----------------------------------------------------------------------------------------------------------------###
 get_broad_genomes(){
 	#--------------------------------------------------#
 	# args
@@ -25,13 +27,13 @@ get_broad_genomes(){
 	# usage
 	local USAGE="get_broad_genomes <b38|b37|b37d|hg19> <fasta|bundle> </PATH/TO/GENOME/DIR>}"
 
+    #--------------------------------------------------#
 	# test if arg present
 	if [[ $# -lt 3 ]]; then
 	    echo "${ECHO_ERROR} Check arguments supplied"
 	    echo "${ECHO_USAGE} ${USAGE}"
-	    exit 1
 	else
-	    echo "${ECHO_INFO} ${ARGS}"
+	    echo "${ECHO_INFO} ${PROGNAME} ${ARGS}"
 	fi
 
 	#--------------------------------------------------#
