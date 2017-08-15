@@ -1,7 +1,9 @@
 # Functions
 
 ```bash
-source ngs-utils.sh
+git clone https://github.com/snewhouse/exotic-dna-ngs.git
+cd exotic-dna-ngs
+source src/ngs-utils.sh
 ```
 
 ## List of functions
