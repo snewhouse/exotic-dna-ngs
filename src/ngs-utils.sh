@@ -75,7 +75,7 @@ get_broad_genomes(){
     # make GENOME_DIR if needed
 	if [[ ! -d "${GENOME_DIR}" ]]; then
         echo "${ECHO_ERROR} Can't find ${GENOME_DIR}"
-        echo "${ECHO_INFO}  Creating ${GENOME_DIR}"
+        echo "${ECHO_INFO} Creating ${GENOME_DIR}"
         local CMD0="mkdir -p ${GENOME_DIR}"
         ${CMD0}
     else
