@@ -8,7 +8,7 @@
 get_broad_genomes(){
 	#--------------------------------------------------#
 	# args
-	readonly VERSION="v0.1-08.17"
+    readonly VERSION="v0.1-08.17"
     readonly PROGNAME=$(basename $0)
     readonly PROGDIR=$(readlink -m $(dirname $0))
     readonly ARGS="$@"
@@ -186,8 +186,8 @@ ftp://gsapubftp-anonymous@ftp.broadinstitute.org/bundle/b37/1000G_phase1.snps.hi
         echo "${ECHO_INFO} ${WGET_MESSAGE}"
         ${CMD0}
      else
-         echo "${ECHO_ERROR} Check arguments supplied"
-	     echo "${ECHO_USAGE} ${USAGE}"
-         echo "BUNDLE BOOM!"
+        echo "${ECHO_ERROR} Check arguments supplied"
+        echo "${ECHO_USAGE} ${USAGE}"
+        echo "BUNDLE BOOM!"
      fi
 }
