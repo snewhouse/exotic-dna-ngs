@@ -31,6 +31,7 @@ get_broad_genomes(){
 	if [[ $# -eq 0 ]]; then
 	    echo "${ECHO_ERROR} Check arguments supplied"
 	    echo "${ECHO_USAGE} ${USAGE}"
+	    exit 1
 	else
 	    echo "${ECHO_INFO} ${PROGNAME} ${ARGS}"
 	fi
