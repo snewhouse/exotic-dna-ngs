@@ -23,9 +23,11 @@ get_broad_genomes(){
 
 	# test if arg present
 	if [[ $# -eq 0 ]]; then
-	echo "${ECHO_BASE} [   ERROR]: No arguments supplied"
-	echo "[`date`][${PROGNAME}][   USAGE]: ${USAGE}"
-	exit 1
+	    echo "${ECHO_BASE} [   ERROR]: No arguments supplied"
+	    echo "${ECHO_BASE} [   USAGE]: ${USAGE}"
+	    exit 1
+	else
+	    echo "${ECHO_BASE} [    INFO]: ${ARGS}"
 	fi
 
 	#--------------------------------------------------#
