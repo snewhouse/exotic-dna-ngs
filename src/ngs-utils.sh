@@ -38,12 +38,12 @@ get_broad_genomes(){
 	#--------------------------------------------------#
 	# arg 1 reference genome to get
 	local GENOME=${1:-"b38"} # default b38
-	ehco "${ECHO_INFO} GENOME:${GENOME}"
+	echo "${ECHO_INFO} GENOME:${GENOME}"
 
     #--------------------------------------------------#
 	# arg 2 fasta or bundle
 	local BUNDLE=${2:-"fasta"} # default fasta only
-	ehco "${ECHO_INFO} BUNDLE:${BUNDLE}"
+	echo "${ECHO_INFO} BUNDLE:${BUNDLE}"
 
 	#--------------------------------------------------#
 	# arg 3 download directory
@@ -80,7 +80,7 @@ get_broad_genomes(){
         local CMD0="mkdir -p ${GENOME_DIR}"
         ${CMD0}
     else
-        ehco "${ECHO_INFO} GENOME_DIR:${GENOME_DIR}"
+        echo "${ECHO_INFO} GENOME_DIR:${GENOME_DIR}"
     fi
 
     #--------------------------------------------------#
