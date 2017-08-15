@@ -13,3 +13,10 @@ source ngs-utils.sh
 ```bash
 get_broad_genomes <b38|b37|b37d|hg19> <fasta|bundle> </PATH/TO/GENOME/DIR>
 ```
+
+*****
+
+## To do
+
+- [ ] rg_illumina_machine  
+- [ ] rg_illumina_flowcell  
