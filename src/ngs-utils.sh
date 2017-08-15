@@ -7,7 +7,7 @@
 ###-----------------------------------------------------------------------------------------------------------------###
 get_broad_genomes(){
 	#--------------------------------------------------#
-	# args
+	# args n stuff
     local VERSION="v0.1-08.17"
     local PROGNAME="$(basename $0)"
     local PROGDIR="$(readlink -m $(dirname $0))"
@@ -16,7 +16,6 @@ get_broad_genomes(){
     local ECHO_INFO="${ECHO_BASE}  [ INFO]:"
     local ECHO_ERROR="${ECHO_BASE} [ERROR]:"
     local ECHO_USAGE="${ECHO_BASE} [USAGE]:"
-
 
     #--------------------------------------------------#
     # wget commands
@@ -49,6 +48,13 @@ get_broad_genomes(){
 	#--------------------------------------------------#
 	# arg 3 download directory
     local GENOME_DIR=${3:-"/home/${USER}/data/genomes/human/${GENOME}"}
+
+    list_() {
+        local LOG_DIR=${1}
+        local LOG_NAME=${2}
+        local TIME_STAMP="$(date)"
+        ls -l . > ${LOG_NAME}.${TIME_STAMP}.log
+    }
 
     #--------------------------------------------------#
     # reference genome fasta files ftp address
