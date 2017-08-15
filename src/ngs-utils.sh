@@ -108,6 +108,8 @@ get_broad_genomes(){
         echo "${ECHO_INFO} ${WGET_MESSAGE}"
         ${CMD0}
      else
+         echo "${ECHO_ERROR} Check arguments supplied"
+	     echo "${ECHO_USAGE} ${USAGE}"
          echo "FASTA BOOM!"
      fi
 
@@ -182,6 +184,8 @@ ftp://gsapubftp-anonymous@ftp.broadinstitute.org/bundle/b37/1000G_phase1.snps.hi
         echo "${ECHO_INFO} ${WGET_MESSAGE}"
         ${CMD0}
      else
+         echo "${ECHO_ERROR} Check arguments supplied"
+	     echo "${ECHO_USAGE} ${USAGE}"
          echo "BUNDLE BOOM!"
      fi
 }
