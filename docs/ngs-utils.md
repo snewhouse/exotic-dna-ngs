@@ -18,6 +18,12 @@ usage:
 get_broad_genomes <b38|b37|b37d|hg19> <fasta|bundle> </PATH/TO/GENOME/DIR>
 ```
 
+defaults:
+
+- b38  
+- fasta  
+- /home/${USER}/data/genomes/human/${GENOME}  
+
 Tested:
  - `get_broad_genomes hg19 fasta`
 
