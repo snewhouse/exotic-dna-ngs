@@ -96,6 +96,7 @@ get_broad_genomes(){
         cd ${GENOME_DIR}
         echo "${ECHO_INFO} ${WGET_MESSAGE}"
         ${CMD0}
+        cd
     elif [[ "${GENOME}" == "b38" && "${BUNDLE}" == "fasta" ]]; then
         local URL=${b38_broad_fasta}
         local FASTA="${GENOME_DIR}/human.${GENOME}.fasta.gz"
@@ -103,6 +104,7 @@ get_broad_genomes(){
         cd ${GENOME_DIR}
         echo "${ECHO_INFO} ${WGET_MESSAGE}"
         ${CMD0}
+        cd
     elif [[ "${GENOME}" == "b37d" && "${BUNDLE}" == "fasta" ]]; then
         local URL=${b37_decoy_broad_fasta}
         local FASTA="${GENOME_DIR}/human.${GENOME}_decoy.fasta.gz"
@@ -110,6 +112,7 @@ get_broad_genomes(){
         cd ${GENOME_DIR}
         echo "${ECHO_INFO} ${WGET_MESSAGE}"
         ${CMD0}
+        cd
     elif [[ "${GENOME}" == "hg19" && "${BUNDLE}" == "fasta" ]]; then
         local URL=${hg19_broad_fasta}
         local FASTA="${GENOME_DIR}/human.ucsc.${GENOME}.fasta.gz"
@@ -117,10 +120,12 @@ get_broad_genomes(){
         cd ${GENOME_DIR}
         echo "${ECHO_INFO} ${WGET_MESSAGE}"
         ${CMD0}
+        cd
      else
          echo "${ECHO_ERROR} Check arguments supplied"
 	     echo "${ECHO_USAGE} ${USAGE}"
          echo "FASTA BOOM!"
+         cd
      fi
 
 
@@ -175,27 +180,32 @@ ftp://gsapubftp-anonymous@ftp.broadinstitute.org/bundle/b37/1000G_phase1.snps.hi
         cd ${GENOME_DIR}/${GENOME}
         echo "${ECHO_INFO} ${WGET_MESSAGE}"
         ${CMD0}
+        cd
     elif [[ "${GENOME}" == "b38" && "${BUNDLE}" == "bundle" ]]; then
         local URL=${b38_broad_bundle}
         local CMD0="${WGET_DIRS} ${URL}"
         cd ${GENOME_DIR}
         echo "${ECHO_INFO} ${WGET_MESSAGE}"
         ${CMD0}
+        cd
     elif [[ "${GENOME}" == "b37d" && "${BUNDLE}" == "bundle" ]]; then
         local CMD0="${WGET_FILE} -i ${b37_list}" # download from b37_list
         mkdir ${GENOME_DIR}/${GENOME}
         cd ${GENOME_DIR}/${GENOME}
         echo "${ECHO_INFO} ${WGET_MESSAGE}"
         ${CMD0}
+        cd
     elif [[ "${GENOME}" == "hg19" && "${BUNDLE}" == "bundle" ]]; then
         local URL=${hg19_broad_bundle}
         local CMD0="${WGET_DIRS} ${URL}"
         cd ${GENOME_DIR}
         echo "${ECHO_INFO} ${WGET_MESSAGE}"
         ${CMD0}
+        cd
      else
         echo "${ECHO_ERROR} Check arguments supplied"
         echo "${ECHO_USAGE} ${USAGE}"
         echo "BUNDLE BOOM!"
+        cd
      fi
 }
