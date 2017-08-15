@@ -1,6 +1,6 @@
 # Functions
 
-- [get_broad_genomes][#getbroadgenomes]
+- [get_broad_genomes][#get_broad_genomes]
 
 ## get_broad_genomes
 
