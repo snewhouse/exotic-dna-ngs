@@ -123,7 +123,7 @@ get_broad_genomes(){
         cd
      else
          echo "${ECHO_ERROR} Check arguments supplied"
-	     echo "${ECHO_USAGE} ${USAGE}"
+         echo "${ECHO_USAGE} ${USAGE}"
          echo "FASTA BOOM!"
          cd
      fi
